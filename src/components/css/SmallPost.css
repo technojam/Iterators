@@ -1,0 +1,23 @@
+.smallPost {
+  display: flex;
+  flex-direction: column;
+  width: 25.5em;
+  height: 30.5rem;
+  background: #ffffff;
+  border-radius: 1em;
+  border: 2px solid black;
+  overflow: hidden;
+
+}
+
+.imageCointainer {
+  width: 475px;
+  height: 175px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}
