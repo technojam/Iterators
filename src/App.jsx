@@ -1,14 +1,17 @@
 import React from 'react';
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import Admin from './components/Admin';
 import Home from "./components/pages/Home";
 
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/admin" component={Admin} />
+    </Switch>
+
   );
 }
 
