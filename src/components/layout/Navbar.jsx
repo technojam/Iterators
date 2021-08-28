@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "1.7em",
 		fontFamily: `Google Sans, -apple-system, BlinkMacSystemFont, "Segoe UI"`,
 	},
-	titleBIG:{
+	titleBIG: {
 		fontWeight: 'bold',
 	},
 	userlogo: {
@@ -42,9 +42,7 @@ export default function MenuAppBar() {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
 
-	const handleChange = (event) => {
-		setAuth(event.target.checked);
-	};
+
 
 	const handleMenu = (event) => {
 		setAnchorEl(event.currentTarget);
@@ -57,25 +55,17 @@ export default function MenuAppBar() {
 	return (
 		<AppBar position="static" className={classes.root}>
 			<Toolbar>
-				{window.location.pathname == "/" ? (
-					<>
+				{window.location.pathname === "/" ? (
+					<React.Fragment>
 						<Typography variant="h6" className={classes.title}>
-							Welcome to 
+							Welcome to
 							<span variant="h6" className={classes.titleBIG} >Technojam Blopost</span>
 						</Typography>
-					</>
+					</React.Fragment>
 				) : (
-					<>
-						<img
-							src="TechnoJam.png"
-							alt="logo"
-							className={classes.logo}
-						/>
-
-						<Typography variant="h6" className={classes.title}>
-							Technojam Blogposts
-						</Typography>
-					</>
+				<Typography variant="h6" className={classes.titleBIG}>
+					Technojam Blogpost
+				</Typography>
 				)}
 				{auth && (
 					<div>
@@ -86,7 +76,6 @@ export default function MenuAppBar() {
 							onClick={handleMenu}
 							color="inherit"
 						>
-							{/* <img src="user.svg" className={classes.userlogo} /> */}
 							{/* IMAGE SVG FOR THE LOGO FOR THE USER */}
 							<svg version="1.0" className={classes.userlogo} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
 								fill="#000000" stroke="none">
@@ -122,7 +111,6 @@ export default function MenuAppBar() {
 								9 27 11 27 11 20 0z"/>
 							</g>
 							</svg>
-
 						</IconButton>
 						<Menu
 							id="menu-appbar"

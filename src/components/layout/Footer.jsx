@@ -42,12 +42,12 @@ const BaseStrip = () => (
 
 // footer cointain con
 const Footer = () => (
-  <>
+  <React.Fragment>
     <footer className="footer">
       <div className="upperStrip">
         <div className="technoLogo">
           <div className="imgCointainer">
-            <img className="logo" src="/TechnoJam.png" alt="techojam Logo"/>
+            <img className="logo" src="/TechnoJam.png" alt="techojam Logo" />
           </div>
           <p>TECHNOJAM</p>
         </div>
@@ -55,7 +55,7 @@ const Footer = () => (
       </div>
       <BaseStrip />
     </footer>
-  </>
+  </React.Fragment>
 );
 
 export default Footer;
