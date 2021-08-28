@@ -1,7 +1,11 @@
+import React, { useState } from 'react';
 import { Container, Paper, Typography, makeStyles, TextField, Button } from '@material-ui/core';
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
-import React from 'react';
+import { toast } from 'react-toastify';
+import { auth } from '../../../../config/firebase';
+import { loginUser } from '../../../../redux/actionCreators/authActionCreators';
+import { useDispatch } from 'react-redux';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -57,6 +61,33 @@ const useStyles = makeStyles((theme) => ({
 
 const Login = () => {
     const classes = useStyles();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!password || !email)
+            return toast.info("Please fill all the fields");
+
+        if (password.length < 8)
+            return toast.info("Password must be of length 8 or greater");
+
+        auth.signInWithEmailAndPassword(email, password).then(user => {
+            const data = {
+                user: user.user.providerData[0],
+                id: user.user.uid
+            };
+            dispatch(loginUser(data));
+            toast.success("You are logged in successfully")
+            history.push("/admin/dashboard");
+        }).catch(err => {
+            toast.error("Invalid email or password");
+        })
+
+    }
+
     return (
 
         <Paper >
@@ -64,23 +95,26 @@ const Login = () => {
                 <Typography variant="h4" component="h1" className={classes.txt}>
                     Login, Here !
                 </Typography>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <Container className={classes.form}>
                         <TextField
                             inputProps={{ style: { fontFamily: 'Arial', color: 'white' } }}
                             className={classes.textfield}
-
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
 
                             id='standard-basic' label='Email' />
                         <TextField
                             inputProps={{ style: { fontFamily: 'Arial', color: 'white' } }}
                             className={classes.textfield}
-
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
                             type="password"
 
                             id='standard-basic' label='Password' />
                     </Container>
                     <Button className={classes.btn}
+                        type="submit"
                         endIcon={<VpnKeyIcon fontSize="large" />}
                         variant="contained" color="primary">Login</Button>
                 </form>
