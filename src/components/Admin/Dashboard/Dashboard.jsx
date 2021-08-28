@@ -10,16 +10,17 @@ export default function Dashboard() {
     const history = useHistory();
 
     const logout = () => {
+        console.log("Help")
         auth.signOut();
         dispatch(logoutUser());
         history.push("/");
     }
     return (
         <div>
-            <h1>This is DashBoard</h1>
             <Button onClick={logout} variant="contained" color="primary">
                 Logout
             </Button>
+            <h1>This is DashBoard</h1>
         </div>
     )
 }

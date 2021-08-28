@@ -90,7 +90,7 @@ const Signup = () => {
         if (password.length < 8)
             return toast.info("Password must be of length 8 or greater");
 
-        if (password != confirm) {
+        if (password !== confirm) {
             return toast.info("Password do not match");
 
         }
