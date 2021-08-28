@@ -7,8 +7,11 @@ import { ToastContainer } from "react-toastify"
 
 import Footer from "./components/layout/Footer";
 
+
+
 function App() {
   return (
+
     <React.Fragment>
       <ToastContainer />
       <Navbar />
@@ -18,6 +21,7 @@ function App() {
       </Switch>
       <Footer />
     </React.Fragment>
+
   );
 }
 

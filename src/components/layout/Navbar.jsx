@@ -65,19 +65,13 @@ export default function MenuAppBar() {
 
 				) : (
 					<React.Fragment>
-						<img
-							src="TechnoJam.png"
-							alt="logo"
-							className={classes.logo}
-						/>
-						<Typography variant="h6" className={classes.title}>
-							Welcome to Technojam Blogposts
-						</Typography>
-					</React.Fragment>
-				) : (
+					<img src="TechnoJam.png"
+					alt="logo"
+					className={classes.logo} />
 					<Typography variant="h6" className={classes.title}>
 						Technojam Blogposts
 					</Typography>
+					</React.Fragment>
 				)}
 				{auth && (
 					<div>
