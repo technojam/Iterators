@@ -12,15 +12,15 @@ import Footer from "./components/layout/Footer";
 function App() {
   return (
 
-    <>
-     <ToastContainer />
-    <Navbar />
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/admin" component={Admin} />
-    </Switch>
-    <Footer />
-    </>
+    <React.Fragment>
+      <ToastContainer />
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/admin" component={Admin} />
+      </Switch>
+      <Footer />
+    </React.Fragment>
 
   );
 }

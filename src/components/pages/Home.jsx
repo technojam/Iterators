@@ -1,16 +1,12 @@
 import React from "react";
 import "../css/home.css";
-import SmallPost from "../layout/SmallPost1";
+
 
 const Home = () => {
   return (
-    <>
-
-      <SmallPost />
-      <SmallPost />
-=======
-
-    </>
+    <React.Fragment>
+      <h1>Home</h1>
+    </React.Fragment>
   );
 };
 
