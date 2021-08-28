@@ -1,0 +1,77 @@
+a {
+  color: inherit;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(11, 74, 108);
+  background: linear-gradient(
+    217deg,
+    rgba(11, 74, 108, 1) 0%,
+    rgba(92, 40, 127, 1) 79%,
+    rgba(239, 51, 122, 1) 100%
+  );
+  text-align: center;
+  color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+/* UPPERSTRIP CODE */
+.upperStrip {
+  padding: 0.5rem 0.5rem 0.2em 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.upperStrip .technoLogo {
+  /* border: 2px solid white; */
+  display: flex;
+  width: 50%;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+.imgCointainer {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgCointainer .logo {
+  width: 9rem;
+}
+
+.technoLogo p {
+  margin-left: 1rem;
+  font-size: 1.5em;
+}
+
+.icons {
+  align-self: flex-end;
+  padding-top: 0.1rem;
+  padding-bottom: 0.5rem;
+  align-self: center;
+  justify-self: center;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons svg {
+  text-decoration: none;
+  font-size: 2.75rem;
+  color: #f4f4f4;
+}
+
+/* BASESTRIP CODE */
+.baseStrip {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.25rem;
+}
