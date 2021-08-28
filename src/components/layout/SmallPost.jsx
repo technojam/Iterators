@@ -1,27 +1,42 @@
 import React from "react";
+import {
+  NearMeOutlined,
+  ThumbUpAlt,
+  Comment
+} from '@material-ui/icons/';
 import "../css/SmallPost.css";
 
-
-const SmallPost = ({imageURI,text,like,share}) => (
+const SmallPost = ({ imageURI, text, like }) => {
+  // console.log(imageURI);
+  return (
   <div className="smallPost">
     <div className="imageCointainer">
-      <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400" alt="" />
+      <img src={imageURI} alt="random post image" />
     </div>
     <div className="textConintainer">
-        <h2 className="heading"></h2>
-        <h5 className="content">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias ipsa sit incidunt maiores voluptas corporis temporibus quas natus modi, quisquam in exercitationem veritatis amet nam culpa ducimus autem, molestias eaque!
-        </h5>
-        <div className="boaltText">
+      <h2 className="heading">This is MF heading</h2>
+      <h5 className="content">
+        {text}
+      </h5>
+      <div className="moreintext bolt">
         ...more
-        </div>
+      </div>
     </div>
     <div className="shareCointainer">
-        <div className="icon like"></div>
-        <div className="icon comment"></div>
-        <div className="icon share"></div>
+      <div className="icon like">
+        < ThumbUpAlt fontSize="large" />
+      </div>
+      <div className="icon comment">
+        < Comment fontSize="large" />
+      </div>
+      <div className="icon share">
+        < NearMeOutlined fontSize="large" />
+      </div>
+      <div className="readmore bolt">
+        Read More...
+      </div>
     </div>
   </div>
-);
+)};
 
 export default SmallPost;
