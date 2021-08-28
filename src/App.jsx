@@ -3,12 +3,17 @@ import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Admin from './components/Admin';
 import Home from "./components/pages/Home";
 import Navbar from "./components/layout/Navbar";
+import { ToastContainer } from "react-toastify"
+
 import Footer from "./components/layout/Footer";
+
 
 
 function App() {
   return (
+
     <>
+     <ToastContainer />
     <Navbar />
     <Switch>
       <Route exact path="/" component={Home} />
@@ -16,6 +21,7 @@ function App() {
     </Switch>
     <Footer />
     </>
+
   );
 }
 

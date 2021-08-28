@@ -5,8 +5,11 @@ import SmallPost from "../layout/SmallPost1";
 const Home = () => {
   return (
     <>
+
       <SmallPost />
       <SmallPost />
+=======
+
     </>
   );
 };
