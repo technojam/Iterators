@@ -1,12 +1,13 @@
 import React from "react";
 import "../css/post.css";
 
-const post = () => {
+const Post = () => {
   return (
     <React.Fragment>
 
       <div className="post">
         <h1>
+          fsdfds
         </h1>
       </div>
       <div>ho ho</div>
@@ -15,4 +16,4 @@ const post = () => {
   );
 };
 
-export default post;
+export default Post;

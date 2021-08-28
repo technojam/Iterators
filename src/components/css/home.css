@@ -1,1 +1,51 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.home .LogoBOX {
+  width: 20rem;
+}
+
+
+/* img work */
+.home .LogoBOX .logoCointainer {
+  height: 50%;
+  height: 24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+.home .LogoBOX .logoCointainer img {
+  width: 300px;
+  transform: scale(1.9);
+  z-index: 10;
+}
+
+
+/* slogon */
+.home .LogoBOX .slogon{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 0.0002em;
+}
+.home .LogoBOX .slogon .lite{
+    font-weight: 300;
+}
+.home .LogoBOX .slogon .italic{
+    /* font-weight: 300; */
+    font-style: italic;
+}
+
+
+.home .smallPostCards{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

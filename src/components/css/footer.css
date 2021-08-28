@@ -3,9 +3,9 @@ a {
 }
 
 .footer {
-  position: relative;
-  bottom: 0;
+  margin-top:auto; 
   left: 0;
+  right: 0;
   width: 100%;
   background: rgb(11, 74, 108);
   background: linear-gradient(

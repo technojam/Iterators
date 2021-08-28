@@ -18,8 +18,11 @@ body {
 }
 
 #root {
-  height: 100%;
+  min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
 }
 
 code {
@@ -38,4 +41,29 @@ code {
   html {
     font-size: 50%;
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 2px 0 10px grey;
+  border-radius: 10px;
+  background: linear-gradient(
+    39deg,
+    rgba(71, 162, 212, 0.5) 15%,
+    rgba(176, 58, 255, 0.4) 33%,
+    rgba(255, 118, 170, 0.4) 65%,
+    rgba(84, 183, 200, 0.4) 84%,
+    rgba(12, 107, 255, 0.4) 100%
+  );
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(242 62 128);
+  border-radius: 10px;
+  box-shadow: inset 0px 1px 9px 0px #989effc2;
 }
