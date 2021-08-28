@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "1.7em",
 		fontFamily: `Google Sans, -apple-system, BlinkMacSystemFont, "Segoe UI"`,
 	},
-	titleBIG: {
+	titleBIG:{
 		fontWeight: 'bold',
 	},
 	userlogo: {
@@ -58,14 +58,20 @@ export default function MenuAppBar() {
 				{window.location.pathname === "/" ? (
 					<React.Fragment>
 						<Typography variant="h6" className={classes.title}>
-							Welcome to
+							Welcome to 
 							<span variant="h6" className={classes.titleBIG} >Technojam Blopost</span>
 						</Typography>
-					</React.Fragment>
+          </React.Fragment>
+
 				) : (
-				<Typography variant="h6" className={classes.titleBIG}>
-					Technojam Blogpost
-				</Typography>
+					<React.Fragment>
+					<img src="TechnoJam.png"
+					alt="logo"
+					className={classes.logo} />
+					<Typography variant="h6" className={classes.title}>
+						Technojam Blogposts
+					</Typography>
+					</React.Fragment>
 				)}
 				{auth && (
 					<div>
