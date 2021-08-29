@@ -32,6 +32,8 @@ const images = ["https://picsum.photos/id/1/5616/3744"
   , "https://picsum.photos/id/0/5616/3744"
   , "https://picsum.photos/id/1024/1920/1280"]
 
+const dumydata = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugit ut nemo aliquid? In cum totam soluta laboriosam alias, voluptatibus necessitatibus laudantium id quo. Et voluptate ratione odio accusantium recusandae. "
+
 const Home = () => {
   return (
     <div className="home">
@@ -54,6 +56,9 @@ const Home = () => {
         {images.map(element => {
           return <SmallPost
             imageURI={element}
+            heading="This is Test Heading 🐫"
+            text={dumydata}
+            like={()=>console.log(1)}
           />
         }
         )}

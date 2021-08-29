@@ -6,15 +6,15 @@ import {
 } from '@material-ui/icons/';
 import "../css/SmallPost.css";
 
-const SmallPost = ({ imageURI, text, like }) => {
+const SmallPost = ({ imageURI,heading, text, like }) => {
   // console.log(imageURI);
   return (
   <div className="smallPost">
     <div className="imageCointainer">
-      <img src={imageURI} alt="random post image" />
+      <img src={imageURI} alt="random post" />
     </div>
     <div className="textConintainer">
-      <h2 className="heading">This is MF heading</h2>
+      <h2 className="heading">{heading}</h2>
       <h5 className="content">
         {text}
       </h5>
@@ -24,7 +24,7 @@ const SmallPost = ({ imageURI, text, like }) => {
     </div>
     <div className="shareCointainer">
       <div className="icon like">
-        < ThumbUpAlt fontSize="large" />
+        < ThumbUpAlt fontSize="large" onClick={like} />
       </div>
       <div className="icon comment">
         < Comment fontSize="large" />
