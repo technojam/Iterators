@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom"
 import Fullpost from "./components/pages/Fullpost";
 import Admin from './components/Admin';
 import Home from "./components/pages/Home";
-import Fullpost from "./components/pages/Fullpost";
 import Navbar from "./components/layout/Navbar";
 import { ToastContainer } from "react-toastify"
 import Footer from "./components/layout/Footer";
