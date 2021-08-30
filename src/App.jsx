@@ -15,6 +15,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/fullpost" component={Fullpost} />
         <Route path="/admin" component={Admin} />
         <Route path="/fullpost" component={Fullpost} />
       </Switch>

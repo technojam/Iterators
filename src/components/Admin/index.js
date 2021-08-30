@@ -5,6 +5,7 @@ import { auth } from '../../config/firebase'
 import { loginUser } from '../../redux/actionCreators/authActionCreators'
 import Login from './Auth/Login/Login'
 import Signup from './Auth/Register/Signup'
+import AddPost from './Dashboard/AddPost'
 import Dashboard from './Dashboard/Dashboard'
 
 export default function Admin() {
@@ -33,7 +34,7 @@ export default function Admin() {
             <Route path={`${path}/login`} component={Login} />
             <Route path={`${path}/register`} component={Signup} />
             <Route path={`${path}/dashboard`} component={Dashboard} />
-
+            <Route path={`${path}/addpost`} component={AddPost} />
         </Switch>
 
     )

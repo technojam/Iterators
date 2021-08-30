@@ -1,4 +1,8 @@
 import React from "react";
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
+import container from '@material-ui/core/container'
+
 import TextField from '@material-ui/core/TextField'
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
@@ -9,29 +13,29 @@ import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 
 
 const useStyles = makeStyles((theme) => ({
-    container:{
+    container: {
         fontSize: "2em",
     },
 
 
-    imageCointainer:{
-        width:"100%",
-        overflow:"hidden",
-        display:"flex",
-        justifyContent:"center",
-        alignItem:"center",
-        height:"40vh"
+    imageCointainer: {
+        width: "100%",
+        overflow: "hidden",
+        display: "flex",
+        justifyContent: "center",
+        alignItem: "center",
+        height: "40vh"
 
     },
-    imageTag:{
-        width:"100%",
+    imageTag: {
+        width: "100%",
         objectFit: "cover",
     },
 
 
-    containerPage:{
-        maxWidth:"44em",
-        margin:"auto",
+    containerPage: {
+        maxWidth: "44em",
+        margin: "auto",
     },
 
     commnetCointainer: {
@@ -74,8 +78,8 @@ const Fullpost = () => {
     const classes = useStyles();
     return (
         <container className={classes.container}>
-            <Box className={classes.containerPage} 
-                p={{ xs: 3, sm: 5, md: 7 }} 
+            <Box className={classes.containerPage}
+                p={{ xs: 3, sm: 5, md: 7 }}
                 mt='10px' ml='2em' mr='2em'>
                 <Paper>
                     <div className={classes.imageCointainer}>
