@@ -1,11 +1,12 @@
 import { Button } from '@material-ui/core'
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Route, Switch, useRouteMatch } from 'react-router-dom'
 import { auth } from '../../../config/firebase'
 import { logoutUser } from '../../../redux/actionCreators/authActionCreators'
+import AddPost from "./AddPost"
 
-export default function Dashboard() {
+const DashMain = () => {
     const dispatch = useDispatch()
     const history = useHistory();
 
@@ -22,5 +23,17 @@ export default function Dashboard() {
             </Button>
             <h1>This is DashBoard</h1>
         </div>
+    )
+}
+
+export default function Dashboard() {
+    const path = useRouteMatch();
+    console.log(path)
+    return (
+        <Switch>
+            <Route exact path={`${path}/`} component={DashMain} />
+
+
+        </Switch>
     )
 }

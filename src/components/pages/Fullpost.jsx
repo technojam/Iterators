@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/Fullpost.css";
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import container from '@material-ui/core/container'
