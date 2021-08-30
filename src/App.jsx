@@ -1,18 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
+import Fullpost from "./components/pages/Fullpost";
 import Admin from './components/Admin';
 import Home from "./components/pages/Home";
 import Fullpost from "./components/pages/Fullpost";
 import Navbar from "./components/layout/Navbar";
 import { ToastContainer } from "react-toastify"
-
 import Footer from "./components/layout/Footer";
-
 
 
 function App() {
   return (
-
     <React.Fragment>
       <ToastContainer />
       <Navbar />
@@ -20,10 +18,10 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/fullpost" component={Fullpost} />
         <Route path="/admin" component={Admin} />
+        <Route path="/fullpost" component={Fullpost} />
       </Switch>
       <Footer />
     </React.Fragment>
-
   );
 }
 

@@ -2,17 +2,42 @@ import React from "react";
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import container from '@material-ui/core/container'
+
 import TextField from '@material-ui/core/TextField'
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
 import Box from "@material-ui/core/Box"
 import Paper from "@material-ui/core/Paper"
-import { CenterFocusStrong } from "@material-ui/icons";
 import { NearMeOutlined, ThumbUpAlt, Comment } from '@material-ui/icons/';
 import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 
 
 const useStyles = makeStyles((theme) => ({
+    container: {
+        fontSize: "2em",
+    },
+
+
+    imageCointainer: {
+        width: "100%",
+        overflow: "hidden",
+        display: "flex",
+        justifyContent: "center",
+        alignItem: "center",
+        height: "40vh"
+
+    },
+    imageTag: {
+        width: "100%",
+        objectFit: "cover",
+    },
+
+
+    containerPage: {
+        maxWidth: "44em",
+        margin: "auto",
+    },
+
     commnetCointainer: {
         width: "100%",
         display: "flex",
@@ -52,9 +77,14 @@ const useStyles = makeStyles((theme) => ({
 const Fullpost = () => {
     const classes = useStyles();
     return (
-        <container>
-            <Box p={{ xs: 3, sm: 5, md: 7 }} mt='10px' ml='5em' mr='5em'>
+        <container className={classes.container}>
+            <Box className={classes.containerPage}
+                p={{ xs: 3, sm: 5, md: 7 }}
+                mt='10px' ml='2em' mr='2em'>
                 <Paper>
+                    <div className={classes.imageCointainer}>
+                        <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400" alt="Blog img" className={classes.imageTag} />
+                    </div>
                     <Box p={3}>
                         <div>
                             The oldest classical Greek and Latin writing had little or no space between words and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized, and word dividers and terminal punctuation became common. The first way to divide sentences into groups was the original paragraphs, similar to an underscore at the beginning of the new group.[2] The Greek parágraphos evolved into the pilcrow (¶), which in English manuscripts in the Middle Ages can be seen inserted inline between sentences. The hedera leaf (e.g. ☙) has also been used in the same way.
@@ -92,10 +122,7 @@ const Fullpost = () => {
                     multiline
                 />
             </form>
-
         </container>
-
-
     );
 };
 

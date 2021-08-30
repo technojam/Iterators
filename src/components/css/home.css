@@ -24,6 +24,12 @@
   z-index: 10;
 }
 
+@media only screen and (max-width: 768px) {
+  .home .LogoBOX .logoCointainer img {
+    transform: scale(1);
+  }
+}
+
 
 /* slogon */
 .home .LogoBOX .slogon{
